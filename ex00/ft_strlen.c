@@ -1,7 +1,9 @@
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-    int iterator;
-    while (str[iterator] != 0)
-        ++iterator;
-    return (iterator);
+	int	iterator;
+
+	iterator = 0;
+	while (str[iterator] != 0)
+		++iterator;
+	return (iterator);
 }
