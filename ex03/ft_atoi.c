@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int	odd_even(int x)
 {
 	if (x % 2)
