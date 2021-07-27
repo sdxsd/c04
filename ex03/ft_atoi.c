@@ -19,7 +19,7 @@ int	ft_atoi(char *str)
 	{
 		if (str[iterator] == '-')
 			++minus_count;
-		else if (str[iterator] == ' ')
+		else if (str[iterator] == ' ' || str[iterator] == '+')
 			;
 		else if (str[iterator] >= '0' && str[iterator] <= '9')
 		{
