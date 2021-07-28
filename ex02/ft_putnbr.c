@@ -29,6 +29,6 @@ void	ft_putnbr(int nb)
 /*
 int main()
 {
-	ft_putnbr(-9);
+	ft_putnbr(-23);
 }
 */
