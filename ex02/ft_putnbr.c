@@ -17,7 +17,7 @@ void	ft_putnbr(int nb)
 		ft_putchar('-');
 		nb = -nb;
 	}
-	else if (nb < 10)
+	if (nb < 10)
 		ft_putchar(nb + '0');
 	else
 	{
@@ -25,3 +25,10 @@ void	ft_putnbr(int nb)
 		ft_putchar((nb % 10) + '0');
 	}
 }
+
+/*
+int main()
+{
+	ft_putnbr(-9);
+}
+*/

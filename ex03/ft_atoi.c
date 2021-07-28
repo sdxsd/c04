@@ -1,6 +1,16 @@
+// #include <stdio.h>
 int	odd_even(int x)
 {
 	if (x % 2)
+		return (1);
+	else
+		return (0);
+}
+
+int	ft_isspace(char c)
+{
+	if (c == ' ' || c == '+' || c == '\t' || c == '\n' \
+	|| c == '\v' || c == '\f' || c == '\r')
 		return (1);
 	else
 		return (0);
@@ -19,7 +29,7 @@ int	ft_atoi(char *str)
 	{
 		if (str[iterator] == '-')
 			++minus_count;
-		else if (str[iterator] == ' ' || str[iterator] == '+')
+		else if (ft_isspace(str[iterator]) == 1)
 			;
 		else if (str[iterator] >= '0' && str[iterator] <= '9')
 		{
@@ -34,3 +44,10 @@ int	ft_atoi(char *str)
 		nbr = nbr - (nbr * 2);
 	return (nbr);
 }
+
+/*
+int main(int argc, char *argv[])
+{
+	printf("%d\n", ft_atoi(argv[1]));
+}
+*/
