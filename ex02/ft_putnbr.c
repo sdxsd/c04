@@ -7,12 +7,14 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int nb)
 {
+	if (nb > 2147483647 || nb < -2147483648)
+		return ;
 	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 12);
 		return ;
 	}
-	else if (nb < 0)
+	if (nb < 0)
 	{
 		ft_putchar('-');
 		nb = -nb;
@@ -29,6 +31,6 @@ void	ft_putnbr(int nb)
 /*
 int main()
 {
-	ft_putnbr(-23);
+	ft_putnbr(42);
 }
 */
