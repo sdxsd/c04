@@ -23,12 +23,12 @@ void	ft_putnbr(int nb)
 		return ;
 	}	
 	ft_putnbr(nb / 10);
-	ft_putchar((nb % 10) + '0');
+	ft_putnbr((nb % 10));
 }
 
 /*
 int main()
 {
-	ft_putnbr(17483);
+	ft_putnbr(-23232);
 }
 */
