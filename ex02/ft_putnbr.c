@@ -7,8 +7,6 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int nb)
 {
-	if (nb > 2147483647 || nb < -2147483648)
-		return ;
 	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 12);
@@ -17,20 +15,20 @@ void	ft_putnbr(int nb)
 	if (nb < 0)
 	{
 		ft_putchar('-');
-		nb = -nb;
+		nb *= (-1);
 	}
 	if (nb < 10)
-		ft_putchar(nb + '0');
-	else
 	{
-		ft_putnbr(nb / 10);
-		ft_putchar((nb % 10) + '0');
-	}
+		ft_putchar(nb + '0');
+		return ;
+	}	
+	ft_putnbr(nb / 10);
+	ft_putchar((nb % 10) + '0');
 }
 
 /*
 int main()
 {
-	ft_putnbr(42);
+	ft_putnbr(17483);
 }
 */
